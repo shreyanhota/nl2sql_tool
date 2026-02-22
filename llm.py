@@ -1,11 +1,11 @@
 import streamlit as st
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from openai import OpenAI
 import os
 import re
 
 
-load_dotenv()
+#oad_dotenv()
 
 def get_schema_with_values(df):
     schema_lines = []
