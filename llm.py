@@ -47,10 +47,15 @@ def generate_sql(question, schema):
                 {question}
                 """
     
+    # client = OpenAI(
+    #     api_key=os.getenv("GROQ_API_KEY"),
+    #     base_url="https://api.groq.com/openai/v1"
+    # )
+
     client = OpenAI(
-        api_key=os.getenv("GROQ_API_KEY"),
-        base_url="https://api.groq.com/openai/v1"
-    )
+    api_key=st.secrets["GROQ_API_KEY"],
+    base_url="https://api.groq.com/openai/v1"
+)
 
     response = client.chat.completions.create(
         model="llama-3.1-8b-instant",  
